@@ -1,4 +1,4 @@
-const Mall = artifacts.require("Mall");
+const Mall = artifacts.require("./Mall.sol");
 
 module.exports = function (deployer) {
     deployer.deploy(Mall);
