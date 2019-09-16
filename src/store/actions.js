@@ -32,7 +32,10 @@ export default {
         let contract = await vm.$store.getters.contract;
         let productsCount = await contract.methods.getNumberOfProducts().call()
         for (let index = 0; index < productsCount; index++) {
-            console.log(await contract.methods.products(index).call())
+            context.commit('addProduct', await contract.methods.products(index).call())
         }
-    }
+    },
+    async addProduct(context, payload) {
+        context.commit('addProduct', payload)
+    },
 };

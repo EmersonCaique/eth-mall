@@ -8,5 +8,8 @@ export default {
     },
     setContract(state, payload) {
         state.contract = payload
+    },
+    addProduct(state, payload) {
+        state.products = [...state.products, payload]
     }
 }

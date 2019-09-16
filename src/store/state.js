@@ -1,5 +1,6 @@
 export default {
     user: null,
     balance: null,
-    contract: null
+    contract: null,
+    products: []
 }

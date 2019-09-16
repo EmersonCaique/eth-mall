@@ -33,6 +33,20 @@ contract Mall {
         productCounter++;        
     }
 
+    function randomProduct() public{
+        
+        Product memory newProduct = Product({
+            id: productCounter,
+            seller: address(0x0),
+            buyer: address(0x0),
+            name: "random product",
+            description:"random description"
+        });
+                
+        products[productCounter] = newProduct;
+        productCounter++;        
+    }
+
     function getNumberOfProducts() public view returns (uint) {
         return productCounter;
     }
